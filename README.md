@@ -6,11 +6,11 @@ pair of dice up to five times and at the end of the turn the points you have acc
 However rolling a snake eyes, a double, or a boxcar (two sixes) will modify the players points in some way.
 
 Boxcar:
-  rolling two sixes, or a boxcar, will make the player lose all their points ad end their turn prematurely.
+  rolling two sixes, or a boxcar, will make the player lose all their points and end their turn prematurely.
 
 Doubles:
   Rolling a double that is not a snake eyes or a boxcar will make the player lose all the points they have accumulated during their
-  turn as well as end their turn prematurely, but will not affect the score that the player currently has.
+  turn as well as end their turn prematurely, but will not affect the score that the player has acquired from previous turns.
 
 Snake eyes:
   Rolling a snake eyes will double the amount of points you recieve at the end of your turn. This can be applied several times per turn 
