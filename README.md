@@ -17,5 +17,5 @@ Snake eyes:
   as long as the player rolls more snake eyes. However if the player rolls a snake eyes and then rolls some other double then the effect
   the snake eyes would have is cancelled.
   
-In the even that both the players are over 150 and are tied there will be a tie breaker where each player is given a turn (5 rounds each
+In the event that both the players are over 150 and are tied there will be a tie breaker where each player is given a turn (5 rounds each
 by default) to get higher points than the other. This process will repeat until someone has the higher score.
