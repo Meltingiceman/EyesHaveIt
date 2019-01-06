@@ -40,7 +40,7 @@ void EyesHaveIt::hum() //human's turn
 	while (i++ < ROUNDS && !endTurn && toupper(userChoice) == 'Y')
 	{
 		turnScore += dice->roll();
-		cout << "Rolled: " << dice->getDie1() << " " << dice->getDie2() << endl;
+		cout << "Rolled: " << dice;
 		doubleChecker();
 		if (!endTurn && i < ROUNDS)
 		{
@@ -67,9 +67,8 @@ void EyesHaveIt::comp() //computer's turn
 	while (i++ < ROUNDS && turnScore < 20 && !endTurn)
 	{
 		turnScore += dice->roll();
-		cout << "Rolled: " << dice->getDie1() << " " << dice->getDie2() << endl;
+		cout << "Rolled: " << dice;
 	    doubleChecker();
-
 	}
 	humTurn = true;
 	endTurn = false;
@@ -121,12 +120,27 @@ void EyesHaveIt::getInput()
 {
 	cout << "Roll again? (y/n) ";
 	cin.ignore();
-	cin.get(userChoice);
-	while (toupper(userChoice) != 'Y' && toupper(userChoice) != 'N')
+	cin >> user;
+	while (user.length() != 1 || toupper(user[0]) != 'Y' && toupper(user[0]) != 'N')
 	{
-		cout << "Answer: Y or N ";
-		cin.get(userChoice);
+		if (user.length() != 1)
+		{
+			cout << "Enter a character: ";
+			cin >> user;
+		}
+		else if (toupper(user[0]) != 'Y' && toupper(user[0]) != 'N')
+		{
+			cout << "Answer Y or N: ";
+			cin >> user;
+		}
 	}
+	/*while (toupper(user[0]) != 'Y' && toupper(user[0]) != 'N')
+	{
+		//cin.ignore();
+		cout << "Answer: Y or N ";
+		cin >> user;
+	}*/
+	userChoice = user[0];
 }
 
 void EyesHaveIt::outro()
