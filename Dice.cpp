@@ -45,3 +45,9 @@ bool Dice::snakeEyes(Dice &dice)
 		bo = true;
 	return bo;
 }
+
+ostream &operator <<(ostream &strm, const Dice* dice)
+{
+	cout << dice->getDie1() << " " << dice->getDie2() << endl;
+	return strm;
+}
