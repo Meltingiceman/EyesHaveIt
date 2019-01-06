@@ -5,6 +5,8 @@
 #include <ctime>
 #include <string>
 #include <iostream>
+#include <iomanip>
+#include <cstdlib>
 
 class Die
 {
