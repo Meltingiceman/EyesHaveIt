@@ -18,7 +18,8 @@ private:
 	bool endTurn;
 	
 	string name;
-	
+	string user;
+
 	char userChoice;
 
 public:
